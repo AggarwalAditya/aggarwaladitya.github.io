@@ -68,9 +68,9 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">PROJECTS</a></li>
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="#">CONTACT</a></li>
+        <li><a href="#" id="projects_link" class="page-scroll">PROJECTS</a></li>
+        <li><a href="#" id="about_link">ABOUT</a></li>
+        <li><a href="#" id="contact_link">CONTACT</a></li>
       </ul>
     </div>
   </div>
@@ -79,20 +79,20 @@
 <!-- First Container -->
 <div class="container-fluid bg-1 text-center">
   
-  <img src="profile_img.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="320" height="300">
+  <img src="images/profile_img.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="320" height="300">
   <h3>Avid Observer</h3>
 </div>
 
 <!-- Second Container -->
 <div class="container-fluid bg-2 text-center">
-  <h3 class="margin">ABOUT</h3>
+  <h3 class="margin" id="about">ABOUT</h3>
   <p>Develops Android apps, python modules and is attracted to good and clean code. Jaypee CS 3rd year student.</p>
   
 </div>
 
 <!-- Third Container (Grid) -->
 <div class="container-fluid bg-3 text-center">    
-  <h3 class="margin">PROJECTS</h3><br>
+  <h3 class="margin" id="projects">PROJECTS</h3><br>
   <div class="row">
   <a href="https://github.com/AggarwalAditya/Profile-Analyser">
     <div class="col-sm-3">
@@ -159,11 +159,11 @@
 </div>
 
 <!-- Footer -->
-<footer class="container-fluid bg-4 text-center">
+<footer class="container-fluid bg-4 text-center" >
 
 <div class="container">
 <div class="row">
-    <div class="col-sm-3" >
+    <div class="col-sm-3"  id="contact">
       <a href="https://www.facebook.com/aditya.aggarwal.9083"><img src="images/facebook.png" class="img-responsive margin" style="width:10%" alt="Image"></a>
     </div>
     <div class="col-sm-3"> 
@@ -184,4 +184,34 @@
 </footer>
 
 </body>
+<script>
+  $("#projects_link").click(function() {
+    
+       $('html, body').animate({
+        scrollTop: $("#projects").offset().top
+    }, 2000);
+  });
+
+
+$("#contact_link").click(function() {
+    
+       $('html, body').animate({
+        scrollTop: $("#contact").offset().top
+    }, 2000);
+  });
+
+
+
+$("#about_link").click(function() {
+    
+       $('html, body').animate({
+        scrollTop: $("#about").offset().top
+    }, 2000);
+  });
+
+</script>
+
+
+
+
 </html>
